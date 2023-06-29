@@ -19,6 +19,7 @@
     "@emotion/react": "^11.11.1",
     "@mdx-js/react": "^2.3.0",
     "@theme-ui/mdx": "^0.16.0",
+    "axois": "^0.0.1-security",
     "gatsby": "^5.11.0",
     "gatsby-plugin-image": "^3.11.0",
     "gatsby-plugin-manifest": "^5.11.0",
