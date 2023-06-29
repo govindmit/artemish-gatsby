@@ -1,30 +1,30 @@
 import type { GatsbyConfig } from "gatsby";
 import axios from "axios";
 
-let token: string;
+// let token: string;
 
-  const qs = require('qs');
-  let data:any = qs.stringify({
-    'username': 'vipulkmango',
-    'password': 'vipulkmango' 
-  });
+//   const qs = require('qs');
+//   let data:any = qs.stringify({
+//     'username': 'vipulkmango',
+//     'password': 'vipulkmango' 
+//   });
 
 
-  axios.request({
-    method: "post",
-    maxBodyLength: Infinity,
-    url: "https://artemish.mangoitsol.com/wp-json/jwt-auth/v1/token",
-    headers: { 
-      'Content-Type': 'application/x-www-form-urlencoded', 
-    },
-    data : data
-  })
-  .then((response) => {
-    console.log(JSON.stringify(response.data));
-  })
-  .catch((error) => {
-    console.log(error);
-  });
+//   axios.request({
+//     method: "post",
+//     maxBodyLength: Infinity,
+//     url: "https://artemish.mangoitsol.com/wp-json/jwt-auth/v1/token",
+//     headers: { 
+//       'Content-Type': 'application/x-www-form-urlencoded', 
+//     },
+//     data : data
+//   })
+//   .then((response) => {
+//     console.log(JSON.stringify(response.data));
+//   })
+//   .catch((error) => {
+//     console.log(error);
+//   });
 
 const config: GatsbyConfig = {
   siteMetadata: {
@@ -52,6 +52,29 @@ const config: GatsbyConfig = {
       resolve: "gatsby-source-wordpress",
       options: {
         url: "https://artemish.mangoitsol.com/graphql",
+        verbose: true,
+        type: {
+          MediaItem: {
+            exclude: true,
+          },
+        },
+        // baseUrl: "artemish.mangoitsol.com",
+        // protocol: "https",
+        // restApiRoutePrefix: "wp-json",
+        // perPage: 100,
+        // jwt_user: "vipulkmango",
+        // jwt_pass: "vipulkmango",
+        // jwt_base_path: "/jwt-auth/v1/token",
+        // includedRoutes: [
+        //   "**/categories",
+        //   "**/posts",
+        //   "**/pages",
+        //   "**/products",
+        //   "**/tags",
+        //   "**/taxonomies",
+        //   "**/users",
+        // ]
+
       },
     },
     "gatsby-plugin-image",
