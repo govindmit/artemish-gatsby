@@ -47,7 +47,6 @@ const config: GatsbyConfig = {
           `https://artemish.mangoitsol.com/graphql`,
       },
     },
-
     {
       resolve: "gatsby-source-wordpress",
       options: {
@@ -74,7 +73,6 @@ const config: GatsbyConfig = {
         //   "**/taxonomies",
         //   "**/users",
         // ]
-
       },
     },
     "gatsby-plugin-image",
