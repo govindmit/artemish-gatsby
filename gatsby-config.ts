@@ -6,16 +6,15 @@ import axios from "axios";
 //   const qs = require('qs');
 //   let data:any = qs.stringify({
 //     'username': 'vipulkmango',
-//     'password': 'vipulkmango' 
+//     'password': 'vipulkmango'
 //   });
-
 
 //   axios.request({
 //     method: "post",
 //     maxBodyLength: Infinity,
 //     url: "https://artemish.mangoitsol.com/wp-json/jwt-auth/v1/token",
-//     headers: { 
-//       'Content-Type': 'application/x-www-form-urlencoded', 
+//     headers: {
+//       'Content-Type': 'application/x-www-form-urlencoded',
 //     },
 //     data : data
 //   })
@@ -45,12 +44,19 @@ const config: GatsbyConfig = {
         url:
           process.env.WPGRAPHQL_URL ||
           `https://artemish.mangoitsol.com/graphql`,
+        schema: {
+          timeout: 240000,
+        },
       },
     },
+
     {
       resolve: "gatsby-source-wordpress",
       options: {
         url: "https://artemish.mangoitsol.com/graphql",
+        schema: {
+          timeout: 240000,
+        },
         verbose: true,
         type: {
           MediaItem: {

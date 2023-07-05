@@ -6,9 +6,6 @@ export default function Template({ data }) {
   const { wpcontent: page } = data;
   const pageData = page?.page;
 
-  console.log("data", data);
-  console.log("data", pageData.title);
-
   return (
     <React.Fragment>
       <Layout />
