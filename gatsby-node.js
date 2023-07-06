@@ -20,13 +20,9 @@ exports.createPages = async ({actions, graphql}) => {
       }
     `)
     const { wpcontent: pages } = data.data;
-    console.log("data",data);
-    console.log("pages",pages);
     const allPages = pages.pages.edges;
-    console.log("allPages",allPages);
     const wpPageTemplate = path.resolve(`./src/templates/wp-page.js`)
     allPages.forEach(page => {
-        console.log("page",page);
         createPage({
           path: `/${page.node.slug}`,
           component: slash(wpPageTemplate),
