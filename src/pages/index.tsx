@@ -1,9 +1,9 @@
 import * as React from "react"
-import Layout from "../components/layouts.js";
-import SEO from "../components/common/seo.js";
-import VideoSec from "../components/AtrimeshHomeCmp/videoSec.js";
 import { type HeadFC, type PageProps } from "gatsby";
 import { ApolloClient, ApolloProvider, InMemoryCache } from "@apollo/client";
+import Layout from "../components/layouts";
+import SEO from "../components/common/seo";
+import VideoSec from "../components/AtrimeshHomeCmp/videoSec";
 const IndexPage: React.FC<PageProps> = () => {
   const seoTitle = "Artemis Defense Institute";
   const client = new ApolloClient({

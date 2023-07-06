@@ -1,10 +1,10 @@
 //functions for remove duplicates array from main array
-const isDuplicate = (arr, id) => {
-  return arr.some((item) => item.node.parentId !== id);
+const isDuplicate = (arr: any, id: any) => {
+  return arr.some((item: any) => item.node.parentId !== id);
 };
-export const removeDuplicatesArray = (arr) => {
-  const uniqueArray = [];
-  arr.forEach((item) => {
+export const removeDuplicatesArray = (arr: any) => {
+  const uniqueArray: any = [];
+  arr.forEach((item: any) => {
     const parentId = item.node.parentId;
     const childItems = item.node.childItems.nodes;
     if (
@@ -13,7 +13,7 @@ export const removeDuplicatesArray = (arr) => {
     ) {
       uniqueArray.push(item);
     }
-    childItems.forEach((childItem) => {
+    childItems.forEach((childItem: any) => {
       if (
         !isDuplicate(uniqueArray, childItem.parentId) &&
         !isDuplicate(uniqueArray, childItem.parentId)
