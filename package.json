@@ -16,6 +16,7 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
+    "@apollo/client": "^3.7.16",
     "@emotion/react": "^11.11.1",
     "@mdx-js/react": "^2.3.0",
     "@theme-ui/mdx": "^0.16.0",
