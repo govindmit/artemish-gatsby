@@ -1,4 +1,4 @@
-import { StaticQuery, graphql, useStaticQuery } from "gatsby";
+import { graphql, useStaticQuery } from "gatsby";
 import React from "react";
 import usePageData from "../../grapgqlquery/graphqlquery";
 const GetPageId = graphql`
@@ -14,10 +14,9 @@ const VideoSec = () => {
   const id = datas?.wpcontent?.allSettings?.readingSettingsPageOnFront;
   const ids = { id: id }
   const pageData = usePageData(ids);
-  console.log(pageData)
+  //console.log("regkl", pageData)
 
   return <>
-    {/* {id ? <MyComponent id={id} /> : ""} */}
     hiii
   </>;
 };
